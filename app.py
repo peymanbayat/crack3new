@@ -26,7 +26,7 @@ def calc_result(score):
             if result == "Crack":
                 st.error("Crack Detected")
                 st.error(f"The life expectancy of this structure in {State} is {total_score}%")
-                    if total_score <= 25:
+                    for total_score in range (25):
                                       st.error("The Crack present type 1, and needs to be corrected as soon as possible.")
                 #   for total_score in range (25,35)
                  #             st.error("The Crack present type 2, and needs to be corrected as soon as possible.")
