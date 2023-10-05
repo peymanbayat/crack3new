@@ -28,16 +28,16 @@ def calc_result(score):
                 st.error(f"The life expectancy of this structure in {State} is {total_score}%")
                 for crack_score in range (25):
                                       st.error("The Crack present type 1, and needs to be corrected as soon as possible.")
-                for crack_score in range (25,35)
+                for crack_score in range (25,35):
                                       st.error("The Crack present type 2, and needs to be corrected as soon as possible.")
-                  # for total_score in range (35,45)
-                   #           st.error("The Crack present type 3, and needs to be corrected as soon as possible.")
-              #     for total_score in range (45,55)
-               #               st.error("The Crack present type 4, and needs to be corrected as soon as possible.")
-                #   for total_score in range (55,65)
-                 #             st.error("The Crack present type 5, and needs to be corrected as soon as possible.")
-                  # for total_score in range (65,100)
-                   #            st.error("The Crack present type 6, and needs to be corrected as soon as possible.")
+                for total_score in range (35,45):
+                                      st.error("The Crack present type 3, and needs to be corrected as soon as possible.")
+                for total_score in range (45,55):
+                                      st.error("The Crack present type 4, and needs to be corrected as soon as possible.")
+                for total_score in range (55,65):
+                                      st.error("The Crack present type 5, and needs to be corrected as soon as possible.")
+                for total_score in range (65,100):
+                                      st.error("The Crack present type 6, and needs to be corrected as soon as possible.")
 
    elif result == "Not-Crack":
        crack_score = random.randint(25, 40)
