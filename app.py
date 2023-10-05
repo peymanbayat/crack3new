@@ -103,9 +103,9 @@ def upload_and_predict(image_data,weight):
    prediction = weight.predict(img_reshape)
    return prediction
 
-if file is  None:
-   st.error("Please upload an image")
-else:   
+#if file is  None:
+ #  st.error("Please upload an image")
+#else:   
    try:
      image = Image.open(file)
      rebuild_model = load_model("weights_data/my_model.h5")
