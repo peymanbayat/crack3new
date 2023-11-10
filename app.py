@@ -119,11 +119,7 @@ def upload_and_predict(image_data,weight):
   stop = st.sidebar.button("Stop")
   st.sidebar.markdown("---")
     
-  cv2.imshow("Webcam", frame)
-  #if cv2.waitKey(1) == ord('q'):
-   #  break
-
-  
+    
 if file is  None:
    st.error("Please upload an image")
 else:   
@@ -137,8 +133,12 @@ else:
    #     vid = cv2.VideoCapture(demo_video)
     #    tffile.name = demo_video
     #else:
-        tffile.write(video_file.read())
-        vid = cv2.VideoCapture(tffile.name)
+     #   tffile.write(video_file.read())
+      #  vid = cv2.VideoCapture(tffile.name)
+
+     cv2.imshow("Webcam", frame)
+     if cv2.waitKey(1) == ord('q'):
+        break
     
     st.sidebar.markdown("**Input Video**")
     st.sidebar.video(tffile.name)
