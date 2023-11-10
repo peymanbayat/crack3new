@@ -127,7 +127,11 @@ if file is  None:
    st.error("Please upload an image")
 else:   
    try:
-     image = video.open(file)
+     #image = image.open(file)
+     while vid.isOpened():
+        ret, frame = vid.read()
+        if not ret:
+            break
      rebuild_model = load_model("weights_data/my_model.h5")
      rebuild_model.compile(loss='categorical_crossentropy',
               optimizer='Adam',
