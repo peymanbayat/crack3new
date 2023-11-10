@@ -8,6 +8,10 @@ import webbrowser
 from PIL import Image, ImageOps
 import random
 
+import cv2
+import av
+
+
 cap = cv2.VideoCapture(0)
 
 def cal_confi(State):
