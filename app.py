@@ -44,7 +44,7 @@ def calc_result(score):
        total_score = crack_score + score
        if st.button('View Results'):
             st.success("No Crack Detected")
-            st.success(f"The life expectancy of this structure in {State} is {total_score}%")
+        #    st.success(f"The life expectancy of this structure in {State} is {total_score}%")
             st.success("There is no such harmful crack present, and the structure is strong enough physically.")
 
 
