@@ -130,7 +130,7 @@ else:
      #image = image.open(file)
     video_file = st.sidebar.file_uploader("Upload a Video",type=['mp4','mov','avi','asf','m4v'])
     st.sidebar.markdown("---")
-    tffile = tempfile.NamedTemporaryFile(delete=False)
+    #tffile = tempfile.NamedTemporaryFile(delete=False)
     
     if not video_file:
         vid = cv2.VideoCapture(demo_video)
