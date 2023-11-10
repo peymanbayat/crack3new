@@ -1,4 +1,3 @@
-
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.models import load_model
@@ -98,6 +97,14 @@ file = st.file_uploader("Please upload your image here:")
  
 def upload_and_predict(image_data,weight):
 
+  global prediction
+  size = (224,224)
+  image = ImageOps.fit(image_data,size,Image.ANTIALIAS)
+  img  = np.array(image)
+  img_reshape = img[np.newaxis,...]
+  prediction = weight.predict(img_reshape)
+  return prediction
+  
   st.sidebar.markdown("---")
     
   st.subheader("Output")
@@ -112,14 +119,6 @@ def upload_and_predict(image_data,weight):
         break
 
   
-  global prediction
-  size = (224,224)
-  image = ImageOps.fit(image_data,size,Image.ANTIALIAS)
-  img  = np.array(image)
-  img_reshape = img[np.newaxis,...]
-  prediction = weight.predict(img_reshape)
-  return prediction
-
 if file is  None:
    st.error("Please upload an image")
 else:   
