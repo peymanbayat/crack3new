@@ -10,6 +10,7 @@ import random
 
 import cv2
 import av
+import tempfile
 
 
 cap = cv2.VideoCapture(0)
