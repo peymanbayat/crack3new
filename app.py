@@ -9,6 +9,8 @@ import webbrowser
 from PIL import Image, ImageOps
 import random
 
+cap = cv2.VideoCapture(0)
+
 def cal_confi(State):
   global event_sum
   data = pd.read_csv("weights_data/Data.csv")                           
@@ -105,7 +107,9 @@ def upload_and_predict(image_data,weight):
   stop = st.sidebar.button("Stop")
   st.sidebar.markdown("---")
     
-  cam = cv2.VideoCapture(0)
+  cv2.imshow("Webcam", frame)
+  if cv2.waitKey(1) == ord('q'):
+        break
 
   
   global prediction
