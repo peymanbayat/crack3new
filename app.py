@@ -96,14 +96,17 @@ file = st.file_uploader("Please upload your image here:")
  
 def upload_and_predict(image_data,weight):
 
-  video_file = st.sidebar.file_uploader("Upload a Video",type=['mp4','mov','avi','asf','m4v'])
   st.sidebar.markdown("---")
-  tffile = tempfile.NamedTemporaryFile(delete=False)
-  tffile.write(video_file.read())
-  vid = cv2.VideoCapture(tffile.name)
     
-  st.sidebar.markdown("**Input Video**")
-  st.sidebar.video(tffile.name)
+  st.subheader("Output")
+  stframe = st.empty()
+    
+  run = st.sidebar.button("Start")
+  stop = st.sidebar.button("Stop")
+  st.sidebar.markdown("---")
+    
+  cam = cv2.VideoCapture(0)
+
   
   global prediction
   size = (224,224)
