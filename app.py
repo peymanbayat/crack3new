@@ -133,10 +133,10 @@ else:
     st.sidebar.markdown("---")
     #tffile = tempfile.NamedTemporaryFile(delete=False)
     
-    if not video_file:
-        vid = cv2.VideoCapture(demo_video)
-        tffile.name = demo_video
-    else:
+  #  if not video_file:
+   #     vid = cv2.VideoCapture(demo_video)
+    #    tffile.name = demo_video
+    #else:
         tffile.write(video_file.read())
         vid = cv2.VideoCapture(tffile.name)
     
