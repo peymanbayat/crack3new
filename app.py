@@ -116,7 +116,7 @@ def upload_and_predict(image_data,weight):
     
   cv2.imshow("Webcam", frame)
   if cv2.waitKey(1) == ord('q'):
-  break
+  #break
 
   
 if file is  None:
