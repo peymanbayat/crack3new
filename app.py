@@ -146,15 +146,15 @@ else:
         ret, frame = vid.read()
         if not ret:
             break
-     rebuild_model = load_model("weights_data/my_model.h5")
-     rebuild_model.compile(loss='categorical_crossentropy',
+    rebuild_model = load_model("weights_data/my_model.h5")
+    rebuild_model.compile(loss='categorical_crossentropy',
               optimizer='Adam',
               metrics=['accuracy'])
-     upload_and_predict(image,rebuild_model)
-     class_name = ['Crack','Not-Crack']
-     result = class_name[np.argmax(prediction)]
-     cal_confi(State)
-     calc_result(event_sum)
+    upload_and_predict(image,rebuild_model)
+    class_name = ['Crack','Not-Crack']
+    result = class_name[np.argmax(prediction)]
+    cal_confi(State)
+    calc_result(event_sum)
    except ValueError:
       st.warning("Please upload a valid image")
 
