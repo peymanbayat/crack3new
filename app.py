@@ -100,10 +100,10 @@ def upload_and_predict(image_data,weight):
   st.sidebar.markdown("---")
   tffile = tempfile.NamedTemporaryFile(delete=False)
   tffile.write(video_file.read())
-        vid = cv2.VideoCapture(tffile.name)
+  vid = cv2.VideoCapture(tffile.name)
     
-    st.sidebar.markdown("**Input Video**")
-    st.sidebar.video(tffile.name)
+  st.sidebar.markdown("**Input Video**")
+  st.sidebar.video(tffile.name)
   
    global prediction
    size = (224,224)
