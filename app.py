@@ -142,7 +142,7 @@ else:
     st.sidebar.markdown("**Input Video**")
     st.sidebar.video(tffile.name)
     
-     while vid.isOpened():
+    while vid.isOpened():
         ret, frame = vid.read()
         if not ret:
             break
