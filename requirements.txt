@@ -2,5 +2,18 @@ tensorflow==2.12.0
 opencv_python==4.4.0.46
 streamlit==0.70.0
 Pillow==9.3.0
-numpy = 1.24.1
+numpy
+
 opencv_python_headless
+torch
+torchvision
+PyYAML
+tqdm
+matplotlib
+requests
+scipy
+tensorboard
+pandas
+seaborn
+streamlit-webrtc
+IPython
